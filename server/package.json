@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm start --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "Simon Cordova",
@@ -17,6 +21,8 @@
     "mongoose": "^5.6.10"
   },
   "devDependencies": {
+    "concurrently": "^4.1.2",
+    "cors": "^2.8.5",
     "nodemon": "^1.19.1"
   }
 }
